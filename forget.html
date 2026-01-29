@@ -43,12 +43,11 @@
             msg.textContent = "Password changed successfully!";
             msg.className = "success";
 
-            // frontend demo delay before redirect
             setTimeout(() => {
                 window.location.href = "login.html";
             }, 2000);
 
-            return false; // prevent real submit
+            return false;
         }
     </script>
 
