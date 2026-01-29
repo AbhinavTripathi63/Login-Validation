@@ -1,0 +1,123 @@
+/* Reset + font */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page center */
+body {
+    background-color: lightyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.glass-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Common box for Login / Register / Reset */
+.login-box {
+    width: 330px;
+    padding: 25px;
+    border: 2px solid brown;
+    border-radius: 12px;
+    background-color: #fff8dc;
+}
+
+/* Center headings */
+.login-box h2 {
+    text-align: center;
+    color: brown;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.login-box input[type="text"],
+.login-box input[type="email"],
+.login-box input[type="tel"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Button */
+.login-box button {
+    width: 100%;
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-box button:hover {
+    background-color: darkred;
+}
+
+/* Remember / forgot section */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Links */
+.login-box a {
+    color: brown;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+/* Register/Login text */
+.login-box p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Messages */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.success {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+}
+/* SUCCESS POPUP */
+.popup {
+    display: none;
+    /* hidden by default */
+    position: fixed;
+    /* floating popup */
+    top: 20px;
+    right: 20px;
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    z-index: 9999;
+}

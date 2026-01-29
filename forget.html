@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="glass-container">
+        <div class="login-box">
+            <h2>Set New Password</h2>
+
+            <form onsubmit="return validatePassword();">
+                <input type="password" id="password" required placeholder="New Password">
+                <input type="password" id="confirmPassword" required placeholder="Confirm Password">
+
+                <p id="errorMsg" class="error"></p>
+
+                <button type="submit">Change Password</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validatePassword() {
+            const pass = document.getElementById("password").value;
+            const confirm = document.getElementById("confirmPassword").value;
+            const msg = document.getElementById("errorMsg");
+
+            if (pass === "" || confirm === "") {
+                msg.textContent = "Both fields are required!";
+                msg.className = "error";
+                return false;
+            }
+
+            if (pass !== confirm) {
+                msg.textContent = "Passwords do not match!";
+                msg.className = "error";
+                return false;
+            }
+
+            msg.textContent = "Password changed successfully!";
+            msg.className = "success";
+
+            // frontend demo delay before redirect
+            setTimeout(() => {
+                window.location.href = "login.html";
+            }, 2000);
+
+            return false; // prevent real submit
+        }
+    </script>
+
+</body>
+
+</html>

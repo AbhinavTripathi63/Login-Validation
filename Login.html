@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="popup" class="popup">
+        Logged in successfully!
+    </div>
+
+    <div class="glass-container">
+        <div class="login-box">
+            <h2>Login</h2>
+
+            <form onsubmit="return ValidateLogin();">
+                <input type="text" id="username" required placeholder="Username">
+                <input type="password" id="password" required placeholder="Password">
+
+                <div id="error-message" class="error"></div>
+
+                <div class="remember-forgot">
+                    <label class="remember">
+                        <input type="checkbox">
+                        <span>Remember Me</span>
+                    </label>
+                    <a href="forget.html">Forgot Password?</a>
+                </div>
+
+                <button type="submit">Login</button>
+
+                <p>
+                    Don't have an account?
+                    <a href="register.html">Register</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+
+</html>
